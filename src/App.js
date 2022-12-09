@@ -5,6 +5,7 @@ import Heading from "./Heading";
 import Nav from "./component/Nav";
 import ReactPlayer from "react-player/youtube";
 import InputHooks from "./component/InputHooks";
+import UseStateHook from "./component/UseStateHook";
 import { useState, useRef } from "react";
 const bool = false;
 const str1 = "just";
@@ -58,7 +59,7 @@ const Button = () => {
     </div>
   );
 };
-function App() {
+export default function App() {
   function toggle1() {
     if (bird1.paused) {
       bird1.play();
@@ -104,7 +105,7 @@ function App() {
       <button onClick={toggle1}>bird1</button>
       <button onClick={toggle2}>bird2</button>
       <InputHooks />
+      <UseStateHook />
     </div>
   );
 }
-export default App;
